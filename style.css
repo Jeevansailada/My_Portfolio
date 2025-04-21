@@ -1,0 +1,260 @@
+/* style.css */
+
+:root {
+    --background: #141414;
+    --text: #ffffff;
+    --accent: #e50914;
+    --grey: #777;
+    --card-bg: #1f1f1f;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--accent);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    background-size: cover;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--grey);
+  }
+  
+  .hero-content span {
+    color: var(--accent);
+  }
+  
+  .hero-content a {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  .hero-content a:hover {
+    background-color: #b00610;
+  }
+  
+  /* Skills and Tools Section */
+  .skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+  }
+  .about-container p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    color: #ccc;
+  }
+  
+  
+  .card {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+    min-width: 250px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--grey);
+  }
+  
+  ul li i {
+    margin-right: 10px;
+    color: var(--accent);
+    font-size: 1.4rem;
+  }
+  
+  /* Section common styling */
+  .section {
+    padding: 4rem 2rem;
+    background-color: var(--background);
+    border-bottom: 1px solid #333;
+  }
+  
+  .section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent);
+    font-size: 1.8rem;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--grey);
+    border-top: 1px solid #222;
+  }
+  
+  /* Animations (scroll effects) */
+  .hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .icon-btn {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  .icon-btn:hover {
+    background-color: #b00610;
+    text-decoration: none;
+    color: #fff;
+  }
+  .card p {
+    color: var(--grey);
+    font-size: 0.95rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .contact-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-icon img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    filter: brightness(0) invert(1);
+  }
+  
+  .contact-icon:hover {
+    transform: scale(1.1);
+    color: var(--accent);
+  }
+  #experience p {
+    color: var(--grey);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
